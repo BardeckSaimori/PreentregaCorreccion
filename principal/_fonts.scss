@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import '../utilities/variables';
+
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+@each $name, $size, $fw, $lh in $titles {
+    .title-#{$name} {
+        font-size: $size;
+        font-weight: $fw;
+        line-height: $lh;
+    }
+}
+

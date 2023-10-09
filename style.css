@@ -1,0 +1,214 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Montserrat:100");
+html, body {
+  background-color: #000;
+  font-family: "Montserrat", sans-serif;
+}
+
+#app {
+  background: #0a0a0a;
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(rgba(10, 10, 10, 0.6), rgba(0, 0, 0, 0.9)), repeating-linear-gradient(0, transparent, transparent 2px, black 3px, black 3px), url("https://pbs.twimg.com/ext_tw_video_thumb/1423297871617544198/pu/img/T4QpbDN0rD1rPyOv.jpg:large");
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+}
+
+#wrapper {
+  text-align: center;
+}
+
+.sub {
+  color: red;
+  letter-spacing: 1em;
+  font-size: 30px;
+}
+
+/* mixin coloca una copia de nuestro texto directamente en nuestro texto existente, al mismo tiempo que configura el contenido en el conjunto de texto apropiado en el atributo de texto de datos. */
+.glitch {
+  position: relative;
+  color: white;
+  font-size: 3.5em;
+  letter-spacing: 0.5em;
+  /* ... */
+  animation: glitch-skew 1s infinite linear alternate-reverse;
+}
+
+.glitch::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  left: 2px;
+  text-shadow: -2px 0 #ff004c;
+  /* Clip para la animación */
+  clip: rect(44px, 450px, 56px, 0);
+  /* Runs our glitch-anim defined below to run in a 5s loop, infinitely, with an alternating animation to keep things fresh. */
+  animation: glitch-anim 5s infinite linear alternate-reverse;
+}
+
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  left: -2px;
+  text-shadow: -2px 0 #00fff9, 2px 2px #ff00c1;
+  animation: glitch-anim2 1s infinite linear alternate-reverse;
+}
+
+/* Animación por pasos con porcentajes. */
+@keyframes glitch-anim {
+  0% {
+    clip: rect(47px, 9999px, 13px, 0);
+    transform: skew(0.78deg);
+  }
+  5% {
+    clip: rect(48px, 9999px, 64px, 0);
+    transform: skew(0.05deg);
+  }
+  /* ... Agrega el resto de las keyframes aquí */
+}
+@keyframes glitch-anim2 {
+  /* ... */
+}
+@keyframes glitch-skew {
+  /* ... */
+}
+/* Página de inicio */
+/* Links */
+a, a:link, a:hover, a:visited, a:active {
+  text-decoration: none;
+  color: white;
+}
+
+/* Home y demás */
+/* Estilos generales */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3 {
+  color: #000000;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Géneros */
+/* Estilos generales */
+.container-fluid {
+  margin: 0px;
+  padding: 30px;
+}
+
+.fakeimg {
+  height: 200px;
+}
+
+p {
+  color: #000000;
+  font-family: "Montserrat";
+}
+
+footer {
+  background-color: #000;
+  padding: 10px;
+  text-align: center;
+}
+
+.img-fluid {
+  object-fit: cover;
+}
+
+/* Estilos para la sección de géneros */
+#generos {
+  padding: 20px;
+}
+
+.genero-lista {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.genero-lista li {
+  text-align: center;
+  flex-basis: 100%;
+}
+
+.genero-lista img {
+  width: 60%;
+  height: 60%;
+  margin-bottom: 10px;
+}
+
+.genero-lista h3 {
+  color: #690000;
+  font-size: 20px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat";
+  padding: 10px;
+  background: #ffffff;
+  text-align: center;
+}
+
+/* Header/Blog Title */
+.header {
+  font-size: 40px;
+  text-align: center;
+  background: rgb(0, 0, 0);
+}
+
+/* Columnas */
+/* Izquierda */
+.leftcolumn {
+  float: left;
+  width: 70%;
+}
+
+/* Derecha */
+.rightcolumn {
+  float: left;
+  width: 30%;
+  padding-left: 10px;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  background: #000000;
+}
+
+/* Responsive layout */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {
+    width: 100%;
+    padding: 0;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

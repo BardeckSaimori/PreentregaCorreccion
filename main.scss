@@ -1,0 +1,29 @@
+/* Principal */
+@import 'principal/organize';
+@import 'principal/fuentes';
+
+/* grids */
+@import './grid/variables';
+@import './grid/mixins';
+@import './grid/grid';
+
+/* utilidades */
+@import 'utilities/utilities';
+@import 'utilities/mixins';
+@import 'utilities/variables';
+
+/* Componentes */
+@import 'components/buttons';
+
+/* layout */
+@import 'layouts/header';
+@import 'layouts/forms';
+@import 'layouts/navbar';
+@import 'layouts/footer';
+
+/* vistas */
+@import 'views/index';
+
+
+
+
